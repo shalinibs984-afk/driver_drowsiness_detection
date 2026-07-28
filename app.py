@@ -4,7 +4,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import av
-from pygame import mixer
+#from pygame import mixer
 
 st.set_page_config(page_title="Driver Drowsiness Detection", layout="centered")
 
@@ -12,11 +12,11 @@ st.title("🚗 Driver Drowsiness Detection System")
 st.write("Start the webcam and look at the camera.")
 
 # Alarm
-mixer.init()
-try:
-    mixer.music.load("alarm.mpeg")
-except:
-    st.warning("alarm.mpeg not found.")
+#mixer.init()
+#try:
+    #mixer.music.load("alarm.mpeg")
+#except:
+    #st.warning("alarm.mpeg not found.")
 
 # MediaPipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
