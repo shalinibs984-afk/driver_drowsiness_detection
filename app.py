@@ -117,8 +117,22 @@ class VideoProcessor(VideoProcessorBase):
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
+from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, RTCConfiguration
+
+RTC_CONFIGURATION = RTCConfiguration(
+    {
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]}
+        ]
+    }
+)
+
 webrtc_streamer(
     key="driver",
     video_processor_factory=VideoProcessor,
-    media_stream_constraints={"video": True, "audio": False},
+    rtc_configuration=RTC_CONFIGURATION,
+    media_stream_constraints={
+        "video": True,
+        "audio": False,
+    },
 )
