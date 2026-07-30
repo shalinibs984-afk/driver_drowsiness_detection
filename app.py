@@ -130,10 +130,18 @@ RTC_CONFIGURATION = RTCConfiguration(
 webrtc_streamer(
     key="driver",
     video_processor_factory=VideoProcessor,
-    rtc_configuration=RTC_CONFIGURATION,
+    rtc_configuration={
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]}
+        ]
+    },
     media_stream_constraints={
-        "video": True,
+        "video": {
+            "width": {"ideal": 640},
+            "height": {"ideal": 480},
+            "frameRate": {"ideal": 15},
+        },
         "audio": False,
     },
     async_processing=True,
-)
+            )
