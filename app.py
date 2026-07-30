@@ -50,7 +50,9 @@ class VideoProcessor(VideoProcessorBase):
 
         rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
+        rgb.flags.writeable = False
         results = self.face_mesh.process(rgb)
+        rgb.flags.writeable = True
 
         if results.multi_face_landmarks:
 
