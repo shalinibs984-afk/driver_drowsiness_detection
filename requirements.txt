@@ -3,5 +3,5 @@ opencv-python-headless
 mediapipe==0.10.21
 pygame 
 numpy 
-streamlit-webrtc==0.76.2
+streamlit-webrtc==0.62.4
 av
