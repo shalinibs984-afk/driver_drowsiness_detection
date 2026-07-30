@@ -135,4 +135,5 @@ webrtc_streamer(
         "video": True,
         "audio": False,
     },
+    async_processing=True,
 )
