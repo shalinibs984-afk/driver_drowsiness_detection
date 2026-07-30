@@ -1,7 +1,8 @@
 streamlit==1.60.0
-opencv-python-headless 
+opencv-python-headless==4.11.0.86
+opencv-contrib-python-headless==4.11.0.86
 mediapipe==0.10.21
-pygame 
-numpy 
+pygame
+numpy
 streamlit-webrtc==0.76.2
 av
