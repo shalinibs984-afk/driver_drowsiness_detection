@@ -128,9 +128,7 @@ RTC_CONFIGURATION = RTCConfiguration(
         ]
     }
 )
-
-
-    webrtc_streamer(
+webrtc_streamer(
     key="driver",
     video_processor_factory=VideoProcessor,
     rtc_configuration=RTC_CONFIGURATION,
@@ -145,3 +143,4 @@ RTC_CONFIGURATION = RTCConfiguration(
     },
     async_processing=True,
             )
+
